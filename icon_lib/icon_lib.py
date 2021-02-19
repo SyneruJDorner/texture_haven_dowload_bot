@@ -18,7 +18,8 @@ class SetFolderIcon(object):
         
 
         ini_path = folderPath + "\\" + "desktop.ini"
-        os.remove(ini_path)
+        if (os.path.isfile(ini_path)):
+            os.remove(ini_path)
         ini_contents = "[.ShellClassInfo]\nIconResource=Title.ico,0"
         with open(ini_path, "w") as writer:
             writer.write(ini_contents)

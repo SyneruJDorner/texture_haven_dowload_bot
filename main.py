@@ -146,8 +146,8 @@ def download_JPEG_files(driver, child_name, path_JPEG, debug=False):
         download_wait(download_path)
         file_name = download_links[i].replace("https://texturehaven.com/files/textures/zip/", "")
         file_name = file_name[file_name.rindex('/')+1:]
-        Archive(download_path + file_name).extractall(path)
-        os.remove(download_path + file_name)
+        Archive(download_path + "\\" + file_name).extractall(path)
+        os.remove(download_path + "\\" + file_name)
         pass
     return
 
@@ -167,8 +167,8 @@ def download_PNG_files(driver, child_name, path_PNG, debug=False):
         download_wait(download_path)
         file_name = download_links[i].replace("https://texturehaven.com/files/textures/zip/", "")
         file_name = file_name[file_name.rindex('/')+1:]
-        Archive(download_path + file_name).extractall(path)
-        os.remove(download_path + file_name)
+        Archive(download_path + "\\" + file_name).extractall(path)
+        os.remove(download_path + "\\" + file_name)
         pass
     return
 
